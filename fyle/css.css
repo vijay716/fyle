@@ -1,0 +1,369 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.leftside {
+    flex: 1;
+    padding: 100px;
+}
+
+.rightside {
+    flex: 1;
+    text-align: right;
+}
+
+.rightside img {
+    max-width: 100%;
+    height: auto;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.roboto-bold {
+    font-weight: 700;
+}
+
+.light-red {
+    color: rgb(204, 59, 59);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(204, 59, 59);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(220, 6, 6);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name-container {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(204, 59, 59);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(220, 6, 6);
+}
+
+.one{
+    padding: 25px;
+}
+.vijay{
+    color:black;
+}
+input {
+    background-color: transparent;
+    border: 0px solid;
+    height: 40px;
+    width: 160px;
+    color: #CCC;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rightside {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .name-container {
+        flex-direction: column;
+    }
+}
+
+.second-outer-block {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.second-outer-block-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.second-outer-block-inner h3 {
+    flex-basis: 100%;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: red;
+}
+
+.second-outer-block-inner-1, .second-outer-block-inner-2 {
+    flex: 1;
+    padding: 10px;
+}
+
+.second-outer-block-inner-1 {
+    text-align: left;
+}
+
+.second-outer-block-inner-2 {
+    text-align: left;
+}
+
+.second-outer-block-img {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+    position: relative; /* Added to ensure overlay positioning works correctly */
+}
+
+.second-outer-block-img img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.second-outer-block-img img:hover {
+    transform: scale(1.1);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.second-outer-block-img img:hover + .img-overlay {
+    opacity: 1;
+}
+
+.img-overlay p {
+    margin: 10px;
+}
+
+.img-overlay a {
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.img-overlay a:hover {
+    background-color: darkred;
+}
+.block {
+    text-align: center;
+}
+
+.block .header {
+    margin-bottom: 20px;
+}
+
+.block .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block .images {
+    display: flex;
+    flex-direction: column;
+}
+
+.block .images a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.block .images img {
+    width: 300px;
+    height: 150px;
+    padding-left: 300px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.block .images img:hover {
+    transform: scale(1.1);
+}
+
+.block .descriptions {
+    display: block;
+    width: 170px;
+    height: 500px;
+    padding-right: 400px;
+
+}
+
+.block .descriptions section {
+  
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.block .descriptions section:target {
+    background-color: red;
+    color: white;
+}
+
+.block .descriptions section h4, .block .descriptions section p {
+    margin: 0;
+}
+
+.stats-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.stats-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stats-logo {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.stats-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stats-label {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.stats-icon {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.xx{
+    text-align: center;
+    
+}
+.xx h3{
+    color: red;
+}
+.xx h1 {
+    text-size-adjust: 40px;
+}
